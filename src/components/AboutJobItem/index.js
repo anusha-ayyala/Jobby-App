@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import {Component} from 'react'
 import Cookies from 'js-cookie'
 import {MdLocationOn} from 'react-icons/md'
@@ -5,7 +6,7 @@ import {AiFillStar} from 'react-icons/ai'
 import {BiLinkExternal} from 'react-icons/bi'
 import Loader from 'react-loader-spinner'
 import Header from '../Header'
-
+// eslint-disable-next-line import/extensions
 import SimilarJobs from '../SimilarJobs'
 import './index.css'
 
@@ -27,6 +28,7 @@ class AboutJobItem extends Component {
     this.getJobData()
   }
 
+  // eslint-disable-next-line no-unused-vars
   getJobData = async props => {
     const {match} = this.props
     const {params} = match
@@ -52,7 +54,7 @@ class AboutJobItem extends Component {
           jobDescription: eachItem.job_description,
           lifeAtCompany: {
             description: eachItem.life_at_company.description,
-            imageUrl: eachItem.life_at_company.imageUrl,
+            imageUrl: eachItem.life_at_company.image_url,
           },
           location: eachItem.location,
           packagePerAnnum: eachItem.package_per_annum,
@@ -95,6 +97,7 @@ class AboutJobItem extends Component {
         companyLogoUrl,
         companyWebsiteUrl,
         employmentType,
+        // eslint-disable-next-line no-unused-vars
         id,
         jobDescription,
         lifeAtCompany,
@@ -195,7 +198,7 @@ class AboutJobItem extends Component {
         alt="failure view"
       />
       <h1>Oops! Something Went Wrong</h1>
-      <p>We cannot seem to find the page you are looking for.</p>
+      <p>we cannot seem to find the page you are looking for.</p>
       <div className="btn-container-failure">
         <button
           className="failure-job-details-btn"

@@ -1,5 +1,6 @@
 import {BsSearch} from 'react-icons/bs'
 
+// eslint-disable-next-line import/extensions
 import ProfileDetails from '../ProfileDetails'
 import './index.css'
 

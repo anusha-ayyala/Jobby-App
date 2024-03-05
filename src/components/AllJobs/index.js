@@ -1,10 +1,11 @@
+/* eslint-disable import/extensions */
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
 import {AiOutlineSearch} from 'react-icons/ai'
-
+// eslint-disable-next-line import/extensions
 import Header from '../Header'
-
+// eslint-disable-next-line import/no-unresolved
 import JobItem from '../JobItem'
 import './index.css'
 
@@ -82,7 +83,7 @@ class AllJobs extends Component {
   onGetProfileDetails = async () => {
     this.setState({apiStatus: apiStatusConstants.inProgress})
     const jwtToken = Cookies.get('jwt_token')
-
+    // eslint-disable-next-line no-unused-vars
     const {checkboxInputs, radioInput, searchInput} = this.state
     const profileApiUrl = 'https://apis.ccbp.in/profile'
     const optionsProfile = {
@@ -164,6 +165,7 @@ class AllJobs extends Component {
         eachItem => eachItem !== event.target.id,
       )
       this.setState(
+        // eslint-disable-next-line no-unused-vars
         prevState => ({checkboxInputs: filteredData}),
         this.onGetJobDetails,
       )
@@ -256,7 +258,7 @@ class AllJobs extends Component {
           alt="no jobs"
         />
         <h1>No jobs found</h1>
-        <p>We could not find any jobs. Try other filters</p>
+        <p>We could not find any jobs. Try other filters.</p>
       </div>
     ) : (
       <ul className="ul-job-items-container">
@@ -327,13 +329,14 @@ class AllJobs extends Component {
     this.onGetJobDetails()
   }
 
-  onEnterSearchInput = () => {
+  onEnterSearchInput = event => {
     if (event.key === 'Enter') {
       this.onGetJobDetails()
     }
   }
 
   render() {
+    // eslint-disable-next-line no-unused-vars
     const {checkboxInputs, radioInput, searchInput} = this.state
     return (
       <>

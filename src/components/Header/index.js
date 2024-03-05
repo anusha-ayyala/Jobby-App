@@ -47,6 +47,7 @@ const Header = props => {
             </li>
           </ul>
         </div>
+
         <div className="nav-bar-large-container">
           <Link to="/">
             <img

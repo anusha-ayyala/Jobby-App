@@ -77,14 +77,14 @@ class JobItemDetails extends Component {
       const data = await response.json()
       console.log(data)
       const updatedData = this.getFormattedData(data.job_details)
-      const updateSimilarJobsData = data.similar_jobs.map(eachSimilarJob =>
+      const updatedSimilarJobsData = data.similar_jobs.map(eachSimilarJob =>
         this.getFormattedSimilarData(eachSimilarJob),
       )
       console.log(updatedData)
-      console.log(updateSimilarJobsData)
+      console.log(updatedSimilarJobsData)
       this.setState({
         jobData: updatedData,
-        similarJobsData: updateSimilarJobsData,
+        similarJobsData: updatedSimilarJobsData,
         apiStatus: apiStatusConstants.success,
       })
     } else {
@@ -95,7 +95,7 @@ class JobItemDetails extends Component {
   renderFailureView = () => {
     const {match} = this.props
     const {params} = match
-
+    // eslint-disable-next-line
     const {id} = params
     return (
       <div className="job-item-error-view-container">

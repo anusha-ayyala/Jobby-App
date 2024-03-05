@@ -82,7 +82,7 @@ class Jobs extends Component {
     }
     const response = await fetch(apiUrl, options)
     if (response.ok === true) {
-      const data = await response.jon()
+      const data = await response.json()
       const updatedJobsData = data.jobs.map(eachJob => ({
         companyLogoUrl: eachJob.company_logo_url,
         employmentType: eachJob.employment_type,
