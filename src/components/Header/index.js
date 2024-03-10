@@ -40,6 +40,7 @@ const Header = props => {
               <button
                 type="button"
                 className="nav-mobile-btn"
+                aria-label="Click"
                 onClick={onClickLogout}
               >
                 <FiLogOut />
