@@ -31,11 +31,12 @@ class Login extends Component {
     const {username, password} = this.state
     const userDetails = {username, password}
     const apiUrl = 'https://apis.ccbp.in/login'
+    // eslint-disable-next-line
     const options = {
       method: 'POST',
       body: JSON.stringify(userDetails),
     }
-    const response = await fetch(apiUrl, this.options)
+    const response = await fetch(apiUrl, options)
     const data = await response.json()
     if (response.ok === true) {
       this.onSubmitSuccess(data.jwt_token)
@@ -56,7 +57,7 @@ class Login extends Component {
           <img
             className="login-website-logo"
             src="https://assets.ccbp.in/frontend/react-js/logo-img.png "
-            alt="website-logo"
+            alt="website logo"
           />
           <div className="input-container">
             <label className="input-label" htmlFor="username">
@@ -79,7 +80,7 @@ class Login extends Component {
               type="password"
               id="password"
               value={password}
-              className="username-input-field"
+              className="password-input-field"
               onChange={this.onChangePassword}
               placeholder="Password"
             />
@@ -87,7 +88,7 @@ class Login extends Component {
           <button type="submit" className="login-button">
             Login
           </button>
-          {showSubmitError && <p className="error-message">*{errorMsg}</p>}
+          {showSubmitError && <p className="error-message">{errorMsg}</p>}
         </form>
       </div>
     )

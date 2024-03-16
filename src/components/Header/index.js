@@ -25,6 +25,7 @@ const Header = props => {
               alt="website logo"
             />
           </Link>
+
           <ul className="nav-bar-mobile-icons-container">
             <li>
               <Link to="/">

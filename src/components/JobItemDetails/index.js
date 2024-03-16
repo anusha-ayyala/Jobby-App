@@ -6,6 +6,7 @@ import {BiLinkExternal} from 'react-icons/bi'
 import Cookies from 'js-cookie'
 
 import Header from '../Header'
+// eslint-disable-next-line import/extensions
 import SimilarJobItem from '../SimilarJobItem'
 import SkillsCard from '../SkillsCard'
 import './index.css'
@@ -63,6 +64,7 @@ class JobItemDetails extends Component {
     const {match} = this.props
     const {params} = match
     const {id} = params
+
     const jwtToken = Cookies.get('jwt_token')
     const url = `https://apis.ccbp.in/jobs/${id}`
     const options = {
@@ -110,6 +112,7 @@ class JobItemDetails extends Component {
         <p className="job-item-failure-description">
           We cannot seem to find the page you are looking for
         </p>
+
         <button
           type="button"
           id="button"

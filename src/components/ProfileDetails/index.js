@@ -62,7 +62,7 @@ class ProfileCard extends Component {
         type="button"
         id="button"
         className="profile-failure-button"
-        onClick={this.get}
+        onClick={this.getProfile}
       >
         Retry
       </button>
@@ -80,9 +80,9 @@ class ProfileCard extends Component {
     switch (apiStatus) {
       case apiStatusConstants.success:
         return this.renderProfileView()
-      case apiStatusConstants.failure():
+      case apiStatusConstants.failure:
         return this.renderFailureView()
-      case apiStatusConstants.inProgress():
+      case apiStatusConstants.inProgress:
         return this.renderLoadingView()
       default:
         return null

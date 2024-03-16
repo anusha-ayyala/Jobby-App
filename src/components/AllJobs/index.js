@@ -365,7 +365,7 @@ class AllJobs extends Component {
                 data-testid="searchButton"
                 type="button"
                 className="search-button"
-                aria-label="close"
+                aria-label="search"
                 onClick={this.onSubmitSearchInput}
               >
                 <AiOutlineSearch className="search-icon" />
