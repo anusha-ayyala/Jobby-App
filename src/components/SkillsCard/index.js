@@ -1,6 +1,6 @@
 const SkillsCard = props => {
-  const {skillDetails} = props
-  const {imageUrl, name} = skillDetails
+  const {skillsDetails} = props
+  const {imageUrl, name} = skillsDetails
   return (
     <li className="skills-item-container">
       <div className="skills-container">
